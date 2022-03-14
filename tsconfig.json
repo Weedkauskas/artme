@@ -1,0 +1,17 @@
+{
+    "include": [
+        "resources/js/**/*"
+    ],
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "moduleResolution": "node",
+        "declaration": true,
+        "declarationDir": "build/types",
+        "baseUrl": "."
+    },
+    "exclude": [
+        "node_modules",
+        "public"
+    ]
+}
