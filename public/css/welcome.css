@@ -1,0 +1,9 @@
+.subscribeButton {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+  @media (min-width: 992px) {
+    .subscribeButton {
+      position: absolute;
+      right: 20px; } }
