@@ -1,0 +1,46 @@
+.spoil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background: url('../images/bg_moon.jpg') no-repeat scroll bottom left;
+    background-size: contain;
+
+    @include media-breakpoint-down(lg) {
+        position: fixed;
+    }
+}
+
+.logo {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    background: url('../images/logo.png') no-repeat scroll bottom left;
+    background-size: contain;
+    width: 8%;
+    height: 8%;
+
+    @include media-breakpoint-down(lg) {
+        position: fixed;
+        width: 20%;
+    }
+}
+
+.magic-form {
+    z-index: 2;
+}
+
+.side {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 8%;
+    height: 8%;
+    z-index: 1;
+
+    @include media-breakpoint-down(lg) {
+        width: 30%;
+    }
+}
