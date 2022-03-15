@@ -18,9 +18,11 @@ class EmailHelper
      */
     public function send($subscriptions, $magics)
     {
-        foreach($subscriptions as $subscription) {
+        foreach ($subscriptions as $subscription) {
             $to = [['email' => $subscription->email, 'name' => $subscription->name]];
-            Mail::to($to)->send(new SubscriptionNews($subscription->name, $subscription->email, $subscription->hash, $magics));
+            Mail::to($to)->send(
+                new SubscriptionNews($subscription->name, $subscription->email, $subscription->hash, $magics)
+            );
         }
     }
 }

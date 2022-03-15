@@ -24,8 +24,8 @@ class MagicPhraseAddRequest extends FormRequest
     public function rules()
     {
         return [
-            'phrase'  => 'required',
-            'magic_id'  => 'required',
+            'phrase' => 'required',
+            'magic_id' => 'required',
         ];
     }
 }

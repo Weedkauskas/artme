@@ -6,7 +6,7 @@ use App\Interfaces\SubscriptionRepositoryInterface;
 use App\Models\Subscription;
 
 /**
- * We are using here so called Repository pattern
+ * We are using here so-called Repository pattern
  * Class SubscriptionRepository
  * @package App\Repositories
  */
@@ -62,7 +62,7 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
     {
         $subscriber = Subscription::where(['email' => $email, 'hash' => $hash])->first();
 
-        if(!$subscriber) {
+        if (!$subscriber) {
             return false;
         }
 

@@ -27,7 +27,7 @@ class SubscriptionService implements SubscriptionServiceInterface
     {
         $hash = Str::random(10);
 
-        if($this->subscriptionRepository->exists($email)) {
+        if ($this->subscriptionRepository->exists($email)) {
             redirect('subscribe_view')->withErrors(["email" => "You are already subscribed!"]);
             return false;
         }
@@ -35,7 +35,7 @@ class SubscriptionService implements SubscriptionServiceInterface
         $subscribe = $this->subscriptionRepository->subscribe($email, $name, $hash);
 
         //Send confirmation email
-        if($subscribe) {
+        if ($subscribe) {
             SendSubscribeConfirmation::dispatch($email, $name, $hash);
         }
 
